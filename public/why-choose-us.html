@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://fencetastic.net/wp-content/uploads/2023/01/cropped-F-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Choose Fencetastic | DFW's Trusted Fence Contractor | Free Quote</title>
+  <meta name="description" content="Discover why thousands of DFW homeowners trust Fencetastic for their fencing projects. AFA certified, 10-year warranty, 2,500+ projects completed. Get a free quote today.">
+  <meta name="keywords" content="fence company Dallas, trusted fence contractor DFW, best fence builder Fort Worth, fence installation near me, free fence quote Dallas, AFA certified fence contractor">
+  <meta property="og:title" content="Why Choose Fencetastic | DFW's Trusted Fence Contractor">
+  <meta property="og:description" content="Stop settling for worn-out fences and unreliable contractors. Get the fence you've always wanted — built right, backed by a 10-year warranty.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fencetastic.net/why-choose-us">
+  <link rel="canonical" href="https://fencetastic.net/why-choose-us">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FenceContractor",
+    "name": "Fencetastic - DFW Fence, Deck & Outdoor",
+    "image": "https://fencetastic.net/wp-content/uploads/2022/02/20200707_180056-scaled-e1705691386629.jpg",
+    "url": "https://fencetastic.net",
+    "telephone": "(972) 480-9888",
+    "email": "estimates@fencetastic.net",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5237 China Berry Dr",
+      "addressLocality": "McKinney",
+      "addressRegion": "TX",
+      "postalCode": "75070",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Dallas" },
+      { "@type": "City", "name": "Fort Worth" },
+      { "@type": "City", "name": "Arlington" },
+      { "@type": "City", "name": "Plano" },
+      { "@type": "City", "name": "Irving" },
+      { "@type": "City", "name": "Garland" },
+      { "@type": "City", "name": "McKinney" }
+    ],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "120"
+    }
+  }
+  </script>
+
+  <style>
+    /* Why Choose Us - StoryBrand Landing Page Styles */
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+
+    .problem-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: all var(--transition-base);
+    }
+
+    .problem-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .problem-card__icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(78, 156, 207, 0.15);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-md);
+      color: var(--color-primary-light);
+    }
+
+    .problem-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--color-white);
+      margin-bottom: 0.75rem;
+    }
+
+    .problem-card__text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Plan Steps */
+    .plan-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+      counter-reset: step;
+    }
+
+    .plan-step {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl) var(--space-lg) var(--space-lg);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-base);
+      counter-increment: step;
+    }
+
+    .plan-step:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .plan-step__number {
+      position: absolute;
+      top: -22px;
+      left: var(--space-lg);
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      box-shadow: 0 4px 15px rgba(78, 156, 207, 0.4);
+    }
+
+    .plan-step__title {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-dark);
+    }
+
+    .plan-step__text {
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Success vs Failure */
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+
+    .outcome-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-base);
+    }
+
+    .outcome-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .outcome-card__header {
+      padding: var(--space-md) var(--space-lg);
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+    }
+
+    .outcome-card__header--failure {
+      background: var(--color-warm);
+    }
+
+    .outcome-card__header--success {
+      background: var(--color-primary);
+    }
+
+    .outcome-card__body {
+      padding: var(--space-lg);
+      background: var(--color-white);
+    }
+
+    .outcome-card__body ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .outcome-card__body li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.95rem;
+      color: var(--color-text);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .outcome-card__body li:last-child {
+      border-bottom: none;
+    }
+
+    .outcome-card__body li .icon-fail {
+      color: #d44;
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+
+    .outcome-card__body li .icon-success {
+      color: var(--color-accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item__number {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-item__label {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Guide credentials list */
+    .credential-list {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-md) 0 0;
+    }
+
+    .credential-list li {
+      padding: 0.6rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--color-text);
+    }
+
+    .credential-list li svg {
+      flex-shrink: 0;
+      color: var(--color-accent);
+    }
+
+    /* Hero CTA styling for this page */
+    .hero--landing .hero__title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+    }
+
+    .hero--landing .hero__subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 640px;
+    }
+
+    /* Final CTA section */
+    .final-cta {
+      text-align: center;
+      padding: var(--space-3xl) 0;
+    }
+
+    .final-cta__title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--color-white);
+      margin-bottom: var(--space-md);
+    }
+
+    .final-cta__text {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 600px;
+      margin: 0 auto var(--space-xl);
+      line-height: 1.7;
+    }
+
+    /* Section dark overrides for this page */
+    .section--dark .section-title {
+      color: var(--color-white);
+    }
+
+    .section--dark .section-subtitle {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .section--dark .section-label {
+      color: var(--color-accent-light);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Fencetastic Home">
+        <img src="https://fencetastic.net/wp-content/uploads/2022/03/stacked-logo-fencetastic.png" alt="Fencetastic - DFW Fence, Deck &amp; Outdoor" class="nav__logo-img">
+        </a>
+
+      <div class="nav__links">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/about" class="nav__link">About</a>
+        <div class="nav__dropdown">
+          <a href="/services" class="nav__link nav__dropdown-trigger">
+            Services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__dropdown-menu">
+            <a href="/wood-fences" class="nav__dropdown-link">Wood Fences</a>
+            <a href="/metal-fences" class="nav__dropdown-link">Metal Fences</a>
+            <a href="/vinyl-fences" class="nav__dropdown-link">Vinyl Fences</a>
+            <a href="/farm-fences" class="nav__dropdown-link">Farm Fences</a>
+            <a href="/custom-gates" class="nav__dropdown-link">Custom Gates</a>
+            <a href="/decks" class="nav__dropdown-link">Decks</a>
+            <a href="/pergolas" class="nav__dropdown-link">Pergolas & Patios</a>
+          </div>
+        </div>
+        <a href="/gallery" class="nav__link">Gallery</a>
+        <a href="/financing" class="nav__link">Financing</a>
+        <a href="/faqs" class="nav__link">FAQs</a>
+        <div class="nav__dropdown">
+          <a href="/service-areas" class="nav__link nav__dropdown-trigger">
+            Areas
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="nav__dropdown-menu">
+            <a href="/arlington" class="nav__dropdown-link">Arlington</a>
+            <a href="/dallas" class="nav__dropdown-link">Dallas</a>
+            <a href="/fort-worth" class="nav__dropdown-link">Fort Worth</a>
+            <a href="/garland" class="nav__dropdown-link">Garland</a>
+            <a href="/irving" class="nav__dropdown-link">Irving</a>
+            <a href="/plano" class="nav__dropdown-link">Plano</a>
+          </div>
+        </div>
+        <a href="/warranty" class="nav__link">Warranty</a>
+        <div class="nav__cta">
+          <a href="tel:9724809888" class="btn btn--primary btn--sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (972) 480-9888
+          </a>
+        </div>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay"></div>
+
+  <!-- SECTION 1 - HERO: The Character's Desire -->
+  <header class="hero hero--short hero--landing">
+    <div class="hero__bg">
+      <img src="https://fencetastic.net/wp-content/uploads/2022/02/WhatsApp-Image-2024-02-22-at-17.40.24-12.jpeg" alt="Beautiful custom fence installation by Fencetastic in Dallas Fort Worth" loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          AFA Certified &bull; 10-Year Warranty &bull; 2,500+ Projects Completed
+        </div>
+        <h1 class="hero__title">
+          Your Outdoor Space<br><span>Deserves Better</span>
+        </h1>
+        <p class="hero__subtitle">
+          Stop settling for a worn-out fence or an unreliable contractor. Get the fence you've always wanted &mdash; built right, backed by a 10-year warranty.
+        </p>
+        <div class="btn-group">
+          <a href="tel:9724809888" class="btn btn--primary btn--lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Get Your Free Quote
+          </a>
+          <a href="/gallery" class="btn btn--outline btn--lg">See Our Work</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2 - THE PROBLEM: External, Internal, Philosophical -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">We Get It</span>
+        <h2 class="section-title">We Know What You're Dealing With</h2>
+        <p class="section-subtitle">You're not just looking for a fence. You're looking for someone you can actually trust to do the job right.</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="problem-card__title">Your Current Fence Is an Eyesore</h3>
+          <p class="problem-card__text">Weathered boards, leaning posts, gaps that let the whole neighborhood peek in. Your fence should add value to your property, not embarrassment. Every time you pull into the driveway, it bothers you &mdash; and you know it's dragging down your curb appeal.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          </div>
+          <h3 class="problem-card__title">You've Been Burned by Bad Contractors</h3>
+          <p class="problem-card__text">Missed deadlines, shoddy work, no callbacks. Maybe they ghosted you after the deposit. You deserve a team that shows up when they say they will, does what they promise, and actually picks up the phone.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="problem-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="problem-card__title">You Don't Know Where to Start</h3>
+          <p class="problem-card__text">Materials, styles, permits, HOA rules, property lines &mdash; it's overwhelming. You need a guide who can walk you through every decision, not just a builder who hands you a quote and disappears.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 - THE GUIDE: Fencetastic as the Trusted Expert -->
+  <section class="section section--warm">
+    <div class="container">
+      <div class="split">
+        <div class="split__image reveal reveal-left">
+          <img src="https://fencetastic.net/wp-content/uploads/2022/02/9a16c4_edbf3c9611cd49d493bde5db82d60052_mv2_d_5312_2988_s_4_2.jpg" alt="Fencetastic team installing a premium fence in DFW" width="768" height="432" loading="lazy">
+        </div>
+        <div class="split__content reveal reveal-right">
+          <span class="section-label">Your Trusted Guide</span>
+          <h2 class="section-title">We've Built Over 2,500 Fences Across DFW</h2>
+          <p>We understand the frustration of dealing with unreliable contractors and feeling lost in the process. That's exactly why we built Fencetastic differently &mdash; to be the partner you deserve, not just another contractor.</p>
+          <p>Every homeowner deserves quality craftsmanship, transparent communication, and a team that stands behind their work. That's not a marketing line &mdash; it's the standard we hold ourselves to on every single project.</p>
+          <ul class="credential-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              American Fence Association (AFA) Certified
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              10-Year Workmanship Warranty on Every Project
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Hundreds of 5-Star Reviews from DFW Homeowners
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Spec-Grade Hardware &amp; Premium Materials Only
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 - THE PLAN: 3 Simple Steps -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">Simple Process</span>
+        <h2 class="section-title">Getting Your Dream Fence Is Easy</h2>
+        <p class="section-subtitle">No runaround, no surprises. Just three simple steps between you and the outdoor space you've always wanted.</p>
+      </div>
+      <div class="plan-steps">
+        <div class="plan-step reveal reveal-scale reveal-delay-1">
+          <div class="plan-step__number">1</div>
+          <h3 class="plan-step__title">Schedule Your Free Estimate</h3>
+          <p class="plan-step__text">Call us or fill out our form. We'll visit your property, discuss your vision, measure everything, and give you an honest quote &mdash; no hidden fees, no pressure.</p>
+        </div>
+        <div class="plan-step reveal reveal-scale reveal-delay-2">
+          <div class="plan-step__number">2</div>
+          <h3 class="plan-step__title">Choose Your Perfect Design</h3>
+          <p class="plan-step__text">We'll help you pick the right materials, style, and customizations for your property, budget, and HOA requirements. You'll know exactly what you're getting before we start.</p>
+        </div>
+        <div class="plan-step reveal reveal-scale reveal-delay-3">
+          <div class="plan-step__number">3</div>
+          <h3 class="plan-step__title">We Build It Right</h3>
+          <p class="plan-step__text">Our AFA-certified crew installs your fence with spec-grade hardware and premium materials &mdash; on schedule, on budget, and backed by our industry-leading 10-year warranty.</p>
+        </div>
+      </div>
+      <div class="text-center mt-3 reveal">
+        <a href="tel:9724809888" class="btn btn--primary btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Schedule Your Free Estimate
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 - SUCCESS vs FAILURE -->
+  <section class="section section--warm">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">The Stakes</span>
+        <h2 class="section-title">What's Really at Stake?</h2>
+        <p class="section-subtitle">The difference between the right contractor and the wrong one shows up every day &mdash; in your property value, your peace of mind, and the way your home looks.</p>
+      </div>
+      <div class="outcome-grid">
+        <div class="outcome-card reveal reveal-left">
+          <div class="outcome-card__header outcome-card__header--failure">Without the Right Fence</div>
+          <div class="outcome-card__body">
+            <ul>
+              <li><span class="icon-fail">&times;</span> Property value declines with every year of neglect</li>
+              <li><span class="icon-fail">&times;</span> No privacy or security for your family and pets</li>
+              <li><span class="icon-fail">&times;</span> Constant repairs that cost more than doing it right once</li>
+              <li><span class="icon-fail">&times;</span> Regret from choosing the cheapest bid over quality</li>
+              <li><span class="icon-fail">&times;</span> An eyesore that embarrasses you when guests visit</li>
+            </ul>
+          </div>
+        </div>
+        <div class="outcome-card reveal reveal-right">
+          <div class="outcome-card__header outcome-card__header--success">With Fencetastic</div>
+          <div class="outcome-card__body">
+            <ul>
+              <li><span class="icon-success">&#10003;</span> Property value increases with a beautiful, lasting fence</li>
+              <li><span class="icon-success">&#10003;</span> A secure, private boundary your family can enjoy daily</li>
+              <li><span class="icon-success">&#10003;</span> Zero maintenance worries thanks to our 10-year warranty</li>
+              <li><span class="icon-success">&#10003;</span> Confidence that it was built right with spec-grade hardware</li>
+              <li><span class="icon-success">&#10003;</span> Neighbors asking, "Who built your fence?"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 - SOCIAL PROOF: Testimonial + Stats -->
+  <section class="section section--dark testimonial-section">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label" style="color: var(--color-accent-light);">Real Results</span>
+        <h2 class="section-title" style="color: var(--color-white);">Built on Trust, Backed by Results</h2>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-card__quote">&ldquo;</div>
+        <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-card__text">The quality was through the roof. Their workers stayed after the project, even working in the rain. The new fence is so strong and looks so good, I've had neighbors comment on how great it looks.</p>
+        <div class="testimonial-card__author">&mdash; H. Arnold</div>
+      </div>
+      <div class="stats-bar reveal">
+        <div class="stat-item reveal-scale reveal-delay-1">
+          <div class="stat-item__number">2,500+</div>
+          <div class="stat-item__label">Projects Completed</div>
+        </div>
+        <div class="stat-item reveal-scale reveal-delay-2">
+          <div class="stat-item__number">10+</div>
+          <div class="stat-item__label">Years in Business</div>
+        </div>
+        <div class="stat-item reveal-scale reveal-delay-3">
+          <div class="stat-item__number">6</div>
+          <div class="stat-item__label">Cities Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Partners Banner -->
+  <div class="marquee-banner">
+    <div class="marquee-track">
+      <span><span class="dot"></span> Centaur</span>
+      <span><span class="dot"></span> Trex</span>
+      <span><span class="dot"></span> Wood Defender</span>
+      <span><span class="dot"></span> DoorKing</span>
+      <span><span class="dot"></span> MasterHalco</span>
+      <span><span class="dot"></span> LiftMaster</span>
+      <span><span class="dot"></span> AFA Certified</span>
+      <span><span class="dot"></span> 10-Year Warranty</span>
+      <span><span class="dot"></span> Centaur</span>
+      <span><span class="dot"></span> Trex</span>
+      <span><span class="dot"></span> Wood Defender</span>
+      <span><span class="dot"></span> DoorKing</span>
+      <span><span class="dot"></span> MasterHalco</span>
+      <span><span class="dot"></span> LiftMaster</span>
+      <span><span class="dot"></span> AFA Certified</span>
+      <span><span class="dot"></span> 10-Year Warranty</span>
+    </div>
+  </div>
+
+  <!-- SECTION 7 - FINAL CTA: Direct Call to Action -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg"></div>
+    <div class="container">
+      <div class="cta-banner__content reveal">
+        <h2 class="cta-banner__title">Don't Settle for Less Than Your Property Deserves</h2>
+        <p class="cta-banner__text">Join thousands of DFW homeowners who chose quality over shortcuts. Get a free, no-pressure estimate today &mdash; and see why Fencetastic is the name your neighbors trust.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="tel:9724809888" class="btn btn--primary btn--lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call (972) 480-9888
+          </a>
+          <a href="mailto:estimates@fencetastic.net" class="btn btn--outline btn--lg">Email for Estimate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo" style="margin-bottom: 0.5rem;">
+            <img src="https://fencetastic.net/wp-content/uploads/2022/03/stacked-logo-fencetastic.png" alt="Fencetastic - DFW Fence, Deck &amp; Outdoor" class="nav__logo-img">
+            </a>
+          <p>Transforming outdoor spaces across the Dallas/Fort Worth Metroplex with premium fences, decks, and pergolas since day one.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Services</h4>
+          <ul class="footer__links">
+            <li><a href="/wood-fences">Wood Fences</a></li>
+            <li><a href="/metal-fences">Metal Fences</a></li>
+            <li><a href="/vinyl-fences">Vinyl Fences</a></li>
+            <li><a href="/farm-fences">Farm Fences</a></li>
+            <li><a href="/custom-gates">Custom Gates</a></li>
+            <li><a href="/decks">Decks</a></li>
+            <li><a href="/pergolas">Pergolas & Patios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/financing">Financing</a></li>
+            <li><a href="/faqs">FAQs</a></li>
+            <li><a href="/warranty">Warranty</a></li>
+            <li><a href="/service-areas">Service Areas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contact</h4>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </span>
+            <a href="tel:9724809888">(972) 480-9888</a>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <a href="mailto:estimates@fencetastic.net">estimates@fencetastic.net</a>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span>5237 China Berry Dr<br>McKinney, TX 75070</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2024 Fencetastic - DFW Fence, Deck & Outdoor. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Google Business">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Mobile Call Button -->
+  <a href="tel:9724809888" class="mobile-call">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call for Free Quote: (972) 480-9888
+  </a>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
