@@ -78,6 +78,7 @@
             <a href="/custom-gates" class="nav__dropdown-link">Custom Gates</a>
             <a href="/decks" class="nav__dropdown-link">Decks</a>
             <a href="/pergolas" class="nav__dropdown-link">Pergolas & Patios</a>
+            <a href="/pressure-wash-stain" class="nav__dropdown-link">Pressure Wash & Stain</a>
           </div>
         </div>
         <a href="/gallery" class="nav__link">Gallery</a>
@@ -289,18 +290,59 @@
     </div>
   </section>
 
-  <!-- Testimonial -->
+  <!-- Google Reviews Carousel -->
   <section class="section section--dark testimonial-section">
     <div class="container">
       <div class="section-header section-header--center reveal">
-        <span class="section-label" style="color: var(--color-accent-light);">What Our Clients Say</span>
-        <h2 class="section-title" style="color: var(--color-white);">Built on Trust, Backed by Results</h2>
+        <span class="section-label" style="color: var(--color-accent-light);">Google Reviews</span>
+        <h2 class="section-title" style="color: var(--color-white);">What DFW Homeowners Are Saying</h2>
       </div>
-      <div class="testimonial-card reveal">
-        <div class="testimonial-card__quote">&ldquo;</div>
-        <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-card__text">The quality was through the roof. Their workers stayed after the project, even working in the rain. The new fence is so strong and looks so good, I've had neighbors comment on how great it looks.</p>
-        <div class="testimonial-card__author">&mdash; H. Arnold</div>
+      <div class="reviews-carousel reveal">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">The quality was through the roof. Their workers stayed after the project, even working in the rain. The new fence is so strong and looks so good, I've had neighbors comment on how great it looks.</p>
+            <div class="testimonial-card__author">&mdash; H. Arnold, McKinney</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">Fencetastic did an amazing job on our fence. From the estimate to the final installation, everything was professional and on time. The cedar board on board fence looks incredible and the neighbors are jealous. Highly recommend to anyone in the DFW area!</p>
+            <div class="testimonial-card__author">&mdash; Google Review, Frisco</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">Best fence company in the Metroplex hands down. They replaced our entire backyard fence and added a custom gate. The workmanship is outstanding and the 10-year warranty gives us total peace of mind. Worth every penny.</p>
+            <div class="testimonial-card__author">&mdash; Google Review, Plano</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">We got quotes from five companies and Fencetastic was the clear winner on quality, communication, and value. Our horizontal cedar fence is absolutely stunning. Their crew was respectful, cleaned up every day, and finished ahead of schedule.</p>
+            <div class="testimonial-card__author">&mdash; Google Review, Prosper</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <div class="testimonial-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-card__text">Had Fencetastic build a pergola and stain our existing fence. Both projects turned out great. They use quality materials and you can tell their guys take pride in their work. Already recommended them to three of my neighbors.</p>
+            <div class="testimonial-card__author">&mdash; Google Review, Allen</div>
+          </div>
+        </div>
+        <div class="reviews-nav">
+          <button class="reviews-nav__btn" id="reviewPrev" aria-label="Previous review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="reviews-dots" id="reviewDots"></div>
+          <button class="reviews-nav__btn" id="reviewNext" aria-label="Next review">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="reviews-google">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          <span><strong>5.0</strong> rating on Google &bull; 120+ reviews</span>
+        </div>
       </div>
     </div>
   </section>

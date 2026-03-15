@@ -160,6 +160,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Reviews Carousel ---
+  const reviewsTrack = document.getElementById('reviewsTrack');
+  const reviewDots = document.getElementById('reviewDots');
+  const reviewPrev = document.getElementById('reviewPrev');
+  const reviewNext = document.getElementById('reviewNext');
+
+  if (reviewsTrack) {
+    const slides = reviewsTrack.children;
+    let currentSlide = 0;
+    const total = slides.length;
+
+    // Create dots
+    if (reviewDots) {
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'reviews-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to review ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        reviewDots.appendChild(dot);
+      }
+    }
+
+    function goToSlide(idx) {
+      currentSlide = idx;
+      reviewsTrack.style.transform = `translateX(-${idx * 100}%)`;
+      if (reviewDots) {
+        reviewDots.querySelectorAll('.reviews-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === idx);
+        });
+      }
+    }
+
+    if (reviewPrev) reviewPrev.addEventListener('click', () => goToSlide((currentSlide - 1 + total) % total));
+    if (reviewNext) reviewNext.addEventListener('click', () => goToSlide((currentSlide + 1) % total));
+
+    // Auto-advance every 6 seconds
+    let autoPlay = setInterval(() => goToSlide((currentSlide + 1) % total), 6000);
+    reviewsTrack.closest('.reviews-carousel')?.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    reviewsTrack.closest('.reviews-carousel')?.addEventListener('mouseleave', () => {
+      autoPlay = setInterval(() => goToSlide((currentSlide + 1) % total), 6000);
+    });
+  }
+
   // --- Back to top ---
   const backToTop = document.querySelector('.back-to-top');
   if (backToTop) {
