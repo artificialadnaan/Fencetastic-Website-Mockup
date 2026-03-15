@@ -1865,12 +1865,15 @@ p {
     width: 85%;
     max-width: 380px;
     height: 100vh;
+    height: 100dvh;
     background: var(--color-dark);
     flex-direction: column;
     align-items: flex-start;
-    padding: calc(var(--nav-height) + 2rem) var(--space-lg) var(--space-lg);
+    padding: calc(var(--nav-height) + 1.5rem) var(--space-md) var(--space-lg);
+    padding-bottom: 6rem;
     transition: right var(--transition-base);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     box-shadow: -10px 0 40px rgba(0,0,0,0.3);
   }
 
@@ -1893,11 +1896,15 @@ p {
     position: static;
     opacity: 1;
     visibility: visible;
-    transform: none;
+    transform: none !important;
     box-shadow: none;
     background: transparent;
     padding: 0 0 0 1rem;
     display: none;
+    min-width: auto !important;
+    left: auto !important;
+    max-height: none;
+    overflow: visible;
   }
 
   .nav__dropdown.open .nav__dropdown-menu {
@@ -1907,6 +1914,8 @@ p {
   .nav__dropdown-link {
     color: rgba(255,255,255,0.55);
     padding: 0.5rem 0;
+    font-size: 0.9rem;
+    white-space: normal;
   }
 
   .nav__dropdown-link:hover {
@@ -1917,6 +1926,12 @@ p {
   .nav__cta {
     margin-left: 0;
     margin-top: var(--space-sm);
+    width: 100%;
+  }
+
+  .nav__cta .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .nav__toggle {
@@ -2015,11 +2030,55 @@ p {
   }
 
   .testimonial-card {
-    padding: var(--space-lg);
+    padding: var(--space-md);
+    margin: 0 0.25rem;
+    border-radius: var(--radius-md);
   }
 
   .testimonial-card__text {
-    font-size: 1rem;
+    font-size: 0.88rem !important;
+    line-height: 1.7;
+  }
+
+  .testimonial-card__quote {
+    font-size: 2.5rem !important;
+    top: 0.5rem;
+    left: 0.8rem;
+  }
+
+  .testimonial-card__author {
+    font-size: 0.85rem !important;
+  }
+
+  .testimonial-card__stars {
+    font-size: 0.95rem !important;
+  }
+
+  .reviews-carousel {
+    margin: 0 -0.5rem;
+  }
+
+  .reviews-nav {
+    margin-top: var(--space-sm);
+    gap: 0.75rem;
+  }
+
+  .reviews-nav__btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .reviews-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .reviews-google {
+    font-size: 0.75rem;
+  }
+
+  .mega-menu__footer .btn {
+    width: 100%;
   }
 }
 
