@@ -2437,9 +2437,7 @@ body::before {
   overflow: hidden;
   white-space: nowrap;
   padding: var(--space-lg) 0;
-  background: var(--color-bg-warm);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-white);
 }
 
 .marquee-track {
@@ -2450,26 +2448,19 @@ body::before {
 .marquee-track span {
   display: inline-flex;
   align-items: center;
-  gap: 1.5rem;
-  padding: 0 2rem;
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
+  padding: 0 2.5rem;
 }
 
 .marquee-track span .dot {
-  width: 5px;
-  height: 5px;
-  background: var(--color-secondary);
-  border-radius: 50%;
-  flex-shrink: 0;
+  display: none;
 }
 
 .marquee-track span img {
-  height: 28px;
-  opacity: 0.7;
+  height: 40px;
+  opacity: 0.6;
   transition: opacity var(--transition-fast);
   vertical-align: middle;
+  object-fit: contain;
 }
 
 .marquee-track span img:hover {
