@@ -18,10 +18,10 @@
   --color-text: #333333;
   --color-text-light: #666666;
   --color-text-muted: #999999;
-  --color-bg: #FFFFFF;
-  --color-bg-warm: #f6f2ed;
+  --color-bg: #f9fafb;
+  --color-bg-warm: #f1efe9;
   --color-bg-card: #FFFFFF;
-  --color-border: #E5E0DB;
+  --color-border: #e2ddd7;
   --color-white: #FFFFFF;
   --color-overlay: rgba(28, 28, 28, 0.7);
 
@@ -78,6 +78,11 @@ body {
   background-color: var(--color-bg);
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+/* Ensure alternating sections have contrast */
+.section + .section {
+  border-top: none;
 }
 
 img {
@@ -235,10 +240,10 @@ p {
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 0 var(--color-border), 0 2px 12px rgba(0,0,0,0.04);
 }
 
 .nav.scrolled .nav__link {
@@ -767,7 +772,8 @@ p {
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   background: var(--color-white);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   position: relative;
   z-index: 10;
@@ -833,14 +839,15 @@ p {
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid var(--color-border);
   transition: all var(--transition-base);
-  group: card;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  border-color: rgba(78,156,207,0.3);
 }
 
 .service-card__image {
@@ -918,6 +925,8 @@ p {
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 4/3;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .split__image img {
@@ -1115,6 +1124,7 @@ p {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  border: 1px solid var(--color-border);
 }
 
 .gallery-item img {
@@ -1186,13 +1196,15 @@ p {
   background: var(--color-white);
   border-radius: var(--radius-md);
   margin-bottom: var(--space-sm);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  border: 1px solid var(--color-border);
   overflow: hidden;
-  transition: box-shadow var(--transition-base);
+  transition: all var(--transition-base);
 }
 
 .faq-item:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-color: rgba(78,156,207,0.25);
 }
 
 .faq-item__question {
@@ -1264,15 +1276,18 @@ p {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--space-xl) var(--space-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   text-align: center;
   transition: all var(--transition-base);
-  border: 2px solid transparent;
+  border: 1px solid var(--color-border);
   position: relative;
 }
 
 .pricing-card--featured {
-  border-color: var(--color-secondary);
+  border-color: var(--color-primary);
+  border-width: 2px;
+  box-shadow: 0 4px 24px rgba(78,156,207,0.15);
+  background: linear-gradient(180deg, rgba(78,156,207,0.03) 0%, #fff 100%);
 }
 
 .pricing-card--featured .pricing-card__badge {
@@ -1281,7 +1296,7 @@ p {
 
 .pricing-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 .pricing-card__badge {
@@ -1290,14 +1305,14 @@ p {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: var(--color-white);
-  padding: 0.3rem 1.2rem;
+  padding: 0.35rem 1.3rem;
   border-radius: 50px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .pricing-card__rate {
@@ -1355,7 +1370,7 @@ p {
 
 /* --- Footer --- */
 .footer {
-  background: var(--color-dark);
+  background: #1a1a1a;
   color: rgba(255,255,255,0.7);
   padding-top: var(--space-3xl);
 }
@@ -1458,13 +1473,14 @@ p {
   background: var(--color-white);
   padding: var(--space-lg);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   transition: all var(--transition-base);
-  border-left: 4px solid transparent;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-border);
 }
 
 .info-card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
   border-left-color: var(--color-primary);
 }
 
@@ -1504,13 +1520,15 @@ p {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
   transition: all var(--transition-base);
 }
 
 .area-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border-color: rgba(78,156,207,0.3);
 }
 
 .area-card__body {
@@ -1721,13 +1739,15 @@ p {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
   transition: all var(--transition-base);
 }
 
 .map-card:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
   transform: translateY(-4px);
+  border-color: rgba(78,156,207,0.3);
 }
 
 .map-card__header {
@@ -2135,14 +2155,14 @@ p {
   left: 0;
   right: 0;
   z-index: 998;
-  background: var(--color-primary);
+  background: linear-gradient(135deg, #083d6b, #4e9ccf);
   color: var(--color-white);
   padding: 0.9rem;
   text-align: center;
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.03em;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.15);
 }
 
 .mobile-call:hover {
@@ -2238,12 +2258,13 @@ p {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
   transition: all var(--transition-base);
 }
 
 .comparison-card:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
   transform: translateY(-4px);
 }
 
@@ -2456,15 +2477,18 @@ body::before {
 }
 
 .marquee-track span img {
-  height: 40px;
-  opacity: 0.6;
+  height: 44px;
+  max-height: 44px;
+  width: auto;
+  max-width: 140px;
+  opacity: 0.55;
   transition: opacity var(--transition-fast);
   vertical-align: middle;
   object-fit: contain;
 }
 
 .marquee-track span img:hover {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 @keyframes marquee {
@@ -2546,26 +2570,30 @@ body::before {
   border: none;
   background: var(--color-white);
   backdrop-filter: none;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  border-radius: var(--radius-lg);
 }
 
 .testimonial-card__text {
-  color: var(--color-dark) !important;
+  color: var(--color-text) !important;
   font-style: italic;
+  line-height: 1.85;
 }
 
 .testimonial-card__author {
-  color: var(--color-primary) !important;
+  color: var(--color-primary-dark) !important;
   font-weight: 700;
 }
 
 .testimonial-card__stars {
   color: #f5a623 !important;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
 }
 
 .testimonial-card__quote {
   color: var(--color-primary) !important;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 /* --- Hover Scale on Info Cards --- */
