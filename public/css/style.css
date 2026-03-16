@@ -1186,6 +1186,47 @@ p {
   border-color: var(--color-primary);
 }
 
+/* --- FAQ Tabs --- */
+.faq-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+}
+
+.faq-tab {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  background: #d5dfe5;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.faq-tab:hover {
+  background: #c0d0da;
+}
+
+.faq-tab.active {
+  background: #0c71c3;
+  color: #fff;
+}
+
+.faq-category {
+  display: none;
+}
+
+.faq-category.active {
+  display: block;
+}
+
 /* --- FAQ Accordion --- */
 .faq-list {
   max-width: 800px;
@@ -1193,32 +1234,32 @@ p {
 }
 
 .faq-item {
-  background: var(--color-white);
+  background: #fff;
   border-radius: var(--radius-md);
   margin-bottom: var(--space-sm);
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  border: 1px solid var(--color-border);
+  border: 3px solid #95c6e5;
   overflow: hidden;
   transition: all var(--transition-base);
 }
 
 .faq-item:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  border-color: rgba(78,156,207,0.25);
+  border-color: #4e9ccf;
+  box-shadow: 0 4px 16px rgba(78,156,207,0.12);
 }
 
 .faq-item__question {
   width: 100%;
   text-align: left;
-  padding: 1.3rem 1.5rem;
+  padding: 1.2rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-dark);
+  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+  background: transparent;
 }
 
 .faq-item__icon {
@@ -1226,7 +1267,6 @@ p {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--color-bg-warm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1234,24 +1274,25 @@ p {
 }
 
 .faq-item__icon svg {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
+  stroke: #000;
   transition: transform var(--transition-base);
-}
-
-.faq-item.open .faq-item__icon {
-  background: var(--color-primary);
 }
 
 .faq-item.open .faq-item__icon svg {
   transform: rotate(180deg);
-  stroke: var(--color-white);
+  stroke: #0c71c3;
+}
+
+.faq-item.open {
+  border-color: #4e9ccf;
 }
 
 .faq-item__answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition: max-height 0.4s ease;
 }
 
 .faq-item.open .faq-item__answer {
@@ -1263,6 +1304,18 @@ p {
   font-size: 0.95rem;
   color: var(--color-text-light);
   line-height: 1.8;
+  border-top: 1px solid #e8eff4;
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .faq-tabs {
+    gap: 0.4rem;
+  }
+  .faq-tab {
+    padding: 0.55rem 1rem;
+    font-size: 0.7rem;
+  }
 }
 
 /* --- Pricing / Financing Cards --- */
