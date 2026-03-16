@@ -2436,8 +2436,10 @@ body::before {
 .marquee-banner {
   overflow: hidden;
   white-space: nowrap;
-  padding: var(--space-md) 0;
-  background: var(--color-dark);
+  padding: var(--space-lg) 0;
+  background: var(--color-bg-warm);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .marquee-track {
@@ -2451,16 +2453,27 @@ body::before {
   gap: 1.5rem;
   padding: 0 2rem;
   font-family: var(--font-heading);
-  font-size: 1.3rem;
-  color: rgba(255,255,255,0.25);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
 }
 
 .marquee-track span .dot {
-  width: 6px;
-  height: 6px;
-  background: var(--color-primary);
+  width: 5px;
+  height: 5px;
+  background: var(--color-secondary);
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+.marquee-track span img {
+  height: 28px;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+  vertical-align: middle;
+}
+
+.marquee-track span img:hover {
+  opacity: 1;
 }
 
 @keyframes marquee {
