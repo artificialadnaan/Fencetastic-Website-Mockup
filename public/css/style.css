@@ -27,7 +27,7 @@
 
   --font-heading: 'DM Serif Display', 'Georgia', serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-accent: 'Playfair Display', serif;
+
 
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
@@ -998,10 +998,11 @@ p {
 }
 
 .reviews-track .testimonial-card {
-  min-width: 100%;
-  max-width: 100%;
+  min-width: calc(100% - 2rem);
+  max-width: calc(100% - 2rem);
   flex-shrink: 0;
   box-sizing: border-box;
+  margin: 0 1rem;
 }
 
 .reviews-nav {
@@ -1895,6 +1896,137 @@ p {
 .gap-2 { gap: var(--space-md); }
 .items-center { align-items: center; }
 
+/* --- Nav Mobile Breakpoint (wider for 8 links + CTA) --- */
+@media (max-width: 1100px) {
+  .nav__links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--color-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: calc(var(--nav-height) + 1.5rem) var(--space-md) var(--space-lg);
+    padding-bottom: 6rem;
+    transition: right var(--transition-base);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+  }
+
+  .nav__links.open {
+    right: 0;
+  }
+
+  .nav__link {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  .nav__dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none !important;
+    box-shadow: none;
+    background: transparent;
+    padding: 0 0 0 1rem;
+    display: none;
+    min-width: auto !important;
+    left: auto !important;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .nav__dropdown.open .nav__dropdown-menu {
+    display: block;
+  }
+
+  .nav__dropdown-link {
+    color: rgba(255,255,255,0.55);
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+
+  .nav__dropdown-link:hover {
+    background: transparent;
+    color: var(--color-secondary-light);
+  }
+
+  .nav__cta {
+    margin-left: 0;
+    margin-top: var(--space-sm);
+    width: 100%;
+  }
+
+  .nav__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__dropdown--mega .nav__dropdown-menu {
+    position: static;
+    min-width: auto;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .nav__dropdown--mega:hover .nav__dropdown-menu {
+    transform: none;
+  }
+
+  .mega-menu {
+    display: block;
+  }
+
+  .mega-menu__col {
+    padding: 0.5rem 0;
+    border-right: none !important;
+  }
+
+  .mega-menu__footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 0.75rem 0;
+    background: transparent;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mega-menu__footer-text {
+    color: rgba(255,255,255,0.5);
+  }
+
+  .mega-menu__footer-text strong {
+    color: var(--color-secondary-light);
+  }
+
+  .mega-menu__links .nav__dropdown-link {
+    color: rgba(255,255,255,0.55);
+    padding: 0.4rem 0;
+  }
+
+  .mega-menu__label {
+    color: rgba(255,255,255,0.3);
+    padding: 0;
+  }
+}
+
 /* --- Responsive --- */
 @media (max-width: 1024px) {
   .feature-strip {
@@ -2139,10 +2271,10 @@ p {
   }
 
   .reviews-track .testimonial-card {
-    min-width: 100%;
-    max-width: 100%;
+    min-width: calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
     padding: var(--space-md) !important;
-    margin: 0 !important;
+    margin: 0 0.5rem !important;
   }
 
   .reviews-nav {

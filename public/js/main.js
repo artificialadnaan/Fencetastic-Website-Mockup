@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Mobile dropdown toggles ---
   document.querySelectorAll('.nav__dropdown').forEach(dropdown => {
     const trigger = dropdown.querySelector('.nav__dropdown-trigger');
-    if (trigger && window.innerWidth <= 768) {
+    if (trigger && window.innerWidth <= 1100) {
       trigger.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1100) {
           e.preventDefault();
           dropdown.classList.toggle('open');
         }
