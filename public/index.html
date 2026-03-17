@@ -142,24 +142,25 @@
   <div class="nav-overlay"></div>
 
   <!-- Hero Section -->
-  <header class="hero" style="background: linear-gradient(176deg, #083d6b, #0e61b4, #b6d4f1); min-height: 80vh;">
-    <div class="hero__bg" style="opacity: 0.08;">
-      <img src="https://fencetastic.net/wp-content/uploads/2022/02/bg-img.png" alt="" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+  <header class="hero">
+    <div class="hero__bg">
+      <img src="https://fencetastic.net/wp-content/uploads/2022/02/WhatsApp-Image-2024-03-05-at-12.57.22-8.jpeg" alt="Professional cedar fence installation by Fencetastic in Dallas Fort Worth" loading="eager">
     </div>
-    <div class="container" style="position: relative; z-index: 2;">
+    <div class="hero__overlay"></div>
+    <div class="container">
       <div class="hero__content">
         <div class="hero__badge">
           <span class="hero__badge-dot"></span>
           AFA Certified &bull; 10-Year Warranty &bull; Serving DFW
         </div>
         <h1 class="hero__title">
-          Dallas/Fort Worth's Trusted<br><span style="color: #b6d4f1;">Fence & Outdoor Experts</span>
+          Dallas/Fort Worth's Trusted<br><span>Fence & Outdoor Experts</span>
         </h1>
         <p class="hero__subtitle">
           We build fences, decks, and pergolas that stand the test of time and Texas weather. American Fence Association certified with over 2,500 projects completed.
         </p>
         <div class="btn-group">
-          <a href="tel:9724809888" class="btn btn--lg" style="background: #61ce70; border-color: #61ce70; color: #fff;">Get a Free Quote</a>
+          <a href="#free-quote" class="btn btn--green btn--lg">Get a Free Quote</a>
           <a href="/why-choose-us" class="btn btn--outline btn--lg">Why Choose Us</a>
         </div>
       </div>
@@ -167,7 +168,7 @@
   </header>
 
   <!-- Partners Banner -->
-  <div class="marquee-banner">
+  <div class="marquee-banner" aria-hidden="true" role="presentation">
     <div class="marquee-track">
       <span><img src="https://fencetastic.net/wp-content/uploads/2023/01/centaur.png" alt="Centaur fencing products partner"></span>
       <span><img src="https://fencetastic.net/wp-content/uploads/2023/01/trex2013_000934.png" alt="Trex composite fencing partner"></span>
@@ -199,7 +200,7 @@
         <p class="section-subtitle">From privacy fences to custom pergolas, we build outdoor structures that stand the test of time and Texas weather.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card reveal reveal-delay-1">
+        <div class="service-card service-card--featured reveal reveal-delay-1">
           <div class="service-card__image">
             <img src="/images/card-wood-fence.jpg" alt="Premium board on board cedar fence installation in McKinney TX by Fencetastic" loading="lazy">
             <div class="service-card__image-overlay"></div>
@@ -315,7 +316,7 @@
   </section>
 
   <!-- Google Reviews Carousel -->
-  <section class="section testimonial-section" style="background: linear-gradient(135deg, #1a365d 0%, #2a5298 50%, #4e9ccf 100%);">
+  <section class="section testimonial-section">
     <div class="container">
       <div class="section-header section-header--center reveal">
         <span class="section-label" style="color: rgba(255,255,255,0.7);">Google Reviews</span>
@@ -441,6 +442,70 @@
     </div>
   </section>
 
+  <!-- Quote Request Section -->
+  <section class="quote-section" id="free-quote">
+    <div class="quote-section__bg"></div>
+    <div class="container">
+      <div class="quote-section__inner">
+        <div class="quote-section__text reveal">
+          <span class="section-label">Free Estimate</span>
+          <h2 class="section-title">Get Your Free Quote</h2>
+          <p>Fill out the form and our team will reach out within 24 hours with a detailed estimate for your project. No commitment, no pressure.</p>
+          <ul class="quote-section__list">
+            <li>Free on-site consultation</li>
+            <li>Detailed written estimate</li>
+            <li>Response within 24 hours</li>
+            <li>Flexible financing available</li>
+          </ul>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 1rem;">Or call us directly: <a href="tel:9724809888" style="color: var(--color-secondary-light); font-weight: 600;">(972) 480-9888</a></p>
+        </div>
+        <form class="quote-form reveal reveal-delay-2" action="mailto:estimates@fencetastic.net" method="POST" enctype="text/plain">
+          <h3 class="quote-form__title">Request Your Free Quote</h3>
+          <div class="quote-form__grid">
+            <div class="form-group">
+              <label class="form-label" for="quote-name">Full Name *</label>
+              <input class="form-input" type="text" id="quote-name" name="name" required placeholder="John Smith">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quote-phone">Phone *</label>
+              <input class="form-input" type="tel" id="quote-phone" name="phone" required placeholder="(972) 555-1234">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quote-email">Email</label>
+              <input class="form-input" type="email" id="quote-email" name="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quote-zip">Zip Code *</label>
+              <input class="form-input" type="text" id="quote-zip" name="zip" required placeholder="75070">
+            </div>
+            <div class="form-group quote-form__full">
+              <label class="form-label" for="quote-service">Service Needed</label>
+              <select class="form-select" id="quote-service" name="service">
+                <option value="">Select a service...</option>
+                <option value="wood-fence">Wood Fence</option>
+                <option value="metal-fence">Metal Fence</option>
+                <option value="vinyl-fence">Vinyl Fence</option>
+                <option value="farm-fence">Farm Fence</option>
+                <option value="custom-gate">Custom Gate</option>
+                <option value="deck">Deck</option>
+                <option value="pergola">Pergola / Patio Cover</option>
+                <option value="pressure-wash">Pressure Wash & Stain</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group quote-form__full">
+              <label class="form-label" for="quote-message">Project Details</label>
+              <textarea class="form-textarea" id="quote-message" name="message" rows="3" placeholder="Tell us about your project — fence type, approximate length, timeline, etc."></textarea>
+            </div>
+            <div class="quote-form__full">
+              <button type="submit" class="btn btn--green quote-form__submit">Get My Free Quote</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="cta-banner__bg"></div>
@@ -522,7 +587,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; 2024 Fencetastic - DFW Fence, Deck & Outdoor. All rights reserved.</span>
+        <span>&copy; 2026 Fencetastic - DFW Fence, Deck & Outdoor. All rights reserved.</span>
         <div class="footer__social">
           <a href="#" aria-label="Facebook">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
