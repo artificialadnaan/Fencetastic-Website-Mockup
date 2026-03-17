@@ -1987,6 +1987,13 @@ p {
     display: flex;
   }
 
+  /* Hide logo when mobile drawer is open */
+  .nav__inner:has(.nav__toggle.active) .nav__logo {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
   .nav__dropdown--mega .nav__dropdown-menu {
     position: static;
     min-width: auto;
