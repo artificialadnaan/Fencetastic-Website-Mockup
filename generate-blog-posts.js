@@ -12,8 +12,8 @@ const footerHtml = footerMatch ? footerMatch[0] : '';
 
 // Hero images to rotate
 const heroImages = [
-  'https://fencetastic.net/wp-content/uploads/2022/02/9a16c4_d417120a108543f7b487b06a1f683a9a_mv2_d_4032_3024_s_4_2.jpg',
-  'https://fencetastic.net/wp-content/uploads/2022/02/9a16c4_edbf3c9611cd49d493bde5db82d60052_mv2_d_5312_2988_s_4_2.jpg',
+  'https://fencetastic.net/wp-content/uploads/2022/02/WhatsApp-Image-2024-03-05-at-12.57.22-8.jpeg',
+  'https://fencetastic.net/wp-content/uploads/2022/02/WhatsApp-Image-2024-03-05-at-12.57.22-1.jpeg',
   'https://fencetastic.net/wp-content/uploads/2022/02/WhatsApp-Image-2024-02-22-at-17.40.24-12.jpeg',
   'https://fencetastic.net/wp-content/uploads/2022/02/311706443_540054764791633_825176277833741672_n.jpg',
   'https://fencetastic.net/wp-content/uploads/2022/02/20191109_150727.jpg',
