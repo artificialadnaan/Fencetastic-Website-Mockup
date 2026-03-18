@@ -1422,7 +1422,10 @@ function blogListingHTML(allPosts) {
   <div class="nav-overlay"></div>
 
   <!-- Hero -->
-  <section class="hero hero--sub" style="background-image: url('${heroImages[0]}')">
+  <section class="hero hero--sub">
+    <div class="hero__bg">
+      <img src="${heroImages[0]}" alt="Fencetastic Blog - DFW Fence Tips and Guides" loading="eager">
+    </div>
     <div class="hero__overlay"></div>
     <div class="hero__content container">
       <h1 class="hero__title">
