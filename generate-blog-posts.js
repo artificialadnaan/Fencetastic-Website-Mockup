@@ -22,6 +22,17 @@ const heroImages = [
   'https://fencetastic.net/wp-content/uploads/2022/02/20200707_180056-scaled-e1705691386629.jpg',
 ];
 
+const heroAltTexts = [
+  'Professional cedar fence installation in a Dallas Fort Worth backyard',  // idx 0
+  'Commercial ornamental iron fence with stone columns in DFW',  // idx 1
+  'Board on board cedar privacy fence with topcap in North Texas',  // idx 2
+  'Cedar board on board fence with double trim and corbels',  // idx 3
+  'Board on board fence with double trim and topcap in DFW neighborhood',  // idx 4
+  'Custom wood fence installation by Fencetastic crew',  // idx 5
+  'Japanese cedar horizontal fence design in modern backyard',  // idx 6
+  'Premium cedar fence with professional stain finish in McKinney TX',  // idx 7
+];
+
 // ==========================================
 // ALL 57 BLOG POSTS
 // ==========================================
@@ -1326,7 +1337,7 @@ function blogPostHTML(post, allPosts) {
       </div>
     </div>
 
-    <img src="${heroImages[post.heroIdx]}" alt="${post.title}" class="blog-post__hero-image" loading="lazy">
+    <img src="${heroImages[post.heroIdx]}" alt="${heroAltTexts[post.heroIdx]}" class="blog-post__hero-image" loading="lazy">
 
     <div class="blog-post__content">
       ${post.content}
@@ -1344,7 +1355,7 @@ function blogPostHTML(post, allPosts) {
       <div class="blog-related__grid">
         ${related.map(r => `
         <div class="blog-card">
-          <img src="${heroImages[r.heroIdx]}" alt="${r.title}" class="blog-card__image" loading="lazy">
+          <img src="${heroImages[r.heroIdx]}" alt="${heroAltTexts[r.heroIdx]}" class="blog-card__image" loading="lazy">
           <div class="blog-card__body">
             <div class="blog-card__meta">
               <span class="blog-card__category blog-card__category--${r.categorySlug}">${r.category}</span>
@@ -1441,7 +1452,7 @@ function blogListingHTML(allPosts) {
 
       <!-- Featured Post -->
       <div class="blog-featured reveal">
-        <img src="${heroImages[featured.heroIdx]}" alt="${featured.title}" class="blog-featured__image" loading="lazy">
+        <img src="${heroImages[featured.heroIdx]}" alt="${heroAltTexts[featured.heroIdx]}" class="blog-featured__image" loading="lazy">
         <div class="blog-featured__body">
           <div class="blog-card__meta">
             <span class="blog-card__category blog-card__category--${featured.categorySlug}">${featured.category}</span>
@@ -1464,7 +1475,7 @@ function blogListingHTML(allPosts) {
       <div class="blog-grid">
         ${allPosts.slice(1).map((p, i) => `
         <div class="blog-card reveal${i < 6 ? '' : ' reveal-delay-' + ((i % 3) + 1)}" data-category="${p.category}">
-          <img src="${heroImages[p.heroIdx]}" alt="${p.title}" class="blog-card__image" loading="lazy">
+          <img src="${heroImages[p.heroIdx]}" alt="${heroAltTexts[p.heroIdx]}" class="blog-card__image" loading="lazy">
           <div class="blog-card__body">
             <div class="blog-card__meta">
               <span class="blog-card__category blog-card__category--${p.categorySlug}">${p.category}</span>
